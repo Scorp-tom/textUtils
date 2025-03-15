@@ -4,12 +4,7 @@ import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
 import About from "./Components/About";
 import Alert from "./Components/Alert";
-import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
 function App() {
   // const [btnText, setBtnText] = useState("black")
@@ -38,27 +33,18 @@ function App() {
     }
   };
   return (
-    <Router>
-      {/* <div className="App"> */}
-        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
-        <div className="container my-2">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <TextForm
-                  heading="Enter the text to analyze"
-                  mode={mode}
-                  showAlert={showAlert}
-                />
-              }
-            />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </div>
-        <Alert alert={alert} />
-      {/* </div> */}
-    </Router>
+    <div className="App">
+      <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+      <div className="container my-2">
+        <TextForm
+          heading="Enter the text to analyze"
+          mode={mode}
+          showAlert={showAlert}
+        />
+        <About />
+      </div>
+      <Alert alert={alert} />
+    </div>
   );
 }
 

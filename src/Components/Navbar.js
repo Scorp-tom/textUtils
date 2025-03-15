@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+// import { a } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -26,22 +26,22 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link
+                <a
                   className="nav-link active"
-                  to="/"
-                  // onClick={(e) => e.preventDefault()}
+                  href=""
+                  onClick={(e) => e.preventDefault()}
                 >
                   Home
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link
+                <a
                   className="nav-link"
-                  to="/about"
-                  // onClick={(e) => e.preventDefault()}
+                  href=""
+                  onClick={(e) => e.preventDefault()}
                 >
                   About
-                </Link>
+                </a>
               </li>
               <li className="nav-item dropdown">
                 <a
